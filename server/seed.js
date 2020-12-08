@@ -50,9 +50,7 @@ var searchGithub = sequelize.define('searchGithub', {
 
 sequelize.sync().then(function() {
   return 0
-}).then(function(jane) {
- jane.get({
-    plain: true
-  })
+}).then(function() {
+ console.log("ALL IS FINE")
 });
 
