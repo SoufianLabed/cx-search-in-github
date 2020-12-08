@@ -3,8 +3,10 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 
-const port = 4242
-var sequelize = new Sequelize('searchGithub', 'postgres', 'cabella13', {
+const process = require('process')
+
+const port = process.argv[2]
+var sequelize = new Sequelize('searchGithub', 'postgres', '', {
   dialect: 'postgres',
  
 })
