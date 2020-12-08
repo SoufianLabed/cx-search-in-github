@@ -6,7 +6,7 @@ const cors = require('cors')
 const process = require('process')
 
 const port = process.argv[2]
-var sequelize = new Sequelize('searchGithub', 'postgres', '', {
+var sequelize = new Sequelize('searchGithub', 'postgres', 'cabella13', {
   dialect: 'postgres',
  
 })
@@ -58,14 +58,9 @@ var searchGithub = sequelize.define('searchGithub', {
 
 
 sequelize.sync().then(function() {
-  return searchGithub.create({
-    login: 'janedoe',
-    node_id: '11'
-  });
-}).then(function(jane) {
-  console.log(jane.get({
-    plain: true
-  }));
+  return 0
+}).then(function() {
+  console.log("is sync")
 });
 
 
