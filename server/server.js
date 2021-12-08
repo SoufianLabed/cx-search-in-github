@@ -6,7 +6,7 @@ const cors = require('cors')
 const process = require('process')
 
 const port = process.argv[2]
-var sequelize = new Sequelize('searchGithub', 'postgres', 'cabella13', {
+var sequelize = new Sequelize('DBNAME', 'postgres', 'PASSWORD', {
   dialect: 'postgres',
  
 })
